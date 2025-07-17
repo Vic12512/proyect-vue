@@ -1,0 +1,25 @@
+<template>
+
+    <h3>La temperatura actual es: {{ weatherStore.temperatura }}°</h3>
+
+</template>
+
+<script setup>
+
+    import { useWeather } from '@/Composables/useWeather';
+    import { useWeatherStore } from '@/stores/weatherStore';
+    import { onMounted } from 'vue';
+
+    const weatherStore = useWeatherStore();
+
+    onMounted(() => {
+        useWeather();
+    })
+
+</script>
+
+<style scoped>
+
+
+</style>
+
