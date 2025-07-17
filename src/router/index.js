@@ -20,6 +20,12 @@ const router = createRouter({
     name: 'ListaDeTareas',
     component: () => import('../modules/listaDeTareas/components/ListaDeTareas.vue')
    }
+   ,
+   {
+    path: '/register',
+    name: 'register',
+    component: () => import('../modules/register/views/registerView.vue')
+   }
   ]
 })
 
